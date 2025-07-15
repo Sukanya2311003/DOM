@@ -34,3 +34,33 @@ document.getElementById("rmv").addEventListener('click', function(){
     // taskList.remove();
     taskList.lastElementChild.remove();
 })
+// Example 6
+
+document.getElementById("teaList").addEventListener('click', function(event){
+//  console.log(event.target);
+if(event.target && event.target.matches('.teaItem')){
+    alert("You selected "+ event.target.textContent);
+}
+});
+
+// EXAMPLE 7
+document.getElementById("feedback").addEventListener('submit', function(event){
+    alert("submitted");
+    event.preventDefault();
+    let f= document.getElementById("feedbackInput").value;
+    console.log(f);
+    document.getElementById("feedbackDisplay").textContent=`Feedback is: ${f}`;
+})
+
+// EXAMPLE 8
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('domstatus').textContent="DOM fully loaded";
+});
+
+// EXAMPLE 9
+document.getElementById("togglehighlight").addEventListener('click', function(){
+    let text= document.getElementById("destext");
+    // text.classList.add("highlight");
+    text.classList.toggle("highlight");
+});
+// let v=document.getElementsByTagName('a')-> to get anchor elements
